@@ -11,8 +11,8 @@ app.secret_key = os.getenv("SECRET_KEY", "default_secret_key")
 # MySQL Configuration
 app.config["MYSQL_HOST"] = "localhost"
 app.config["MYSQL_USER"] = "root"
-app.config["MYSQL_PASSWORD"] = os.getenv("MYSQL_PASSWORD", "Sakshi")  # Secure it
-app.config["MYSQL_DB"] = "db1"
+app.config["MYSQL_PASSWORD"] = os.getenv("MYSQL_PASSWORD", "Yourpass")  # Secure it
+app.config["MYSQL_DB"] = "databasename"
 
 mysql = MySQL(app)
 
@@ -20,8 +20,8 @@ mysql = MySQL(app)
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
-app.config["MAIL_USERNAME"] = "sakshipawar9846@gmail.com"  # Your Gmail address
-app.config["MAIL_PASSWORD"] = "hzxt xjlm uerz szyv"  # The app-specific password generated
+app.config["MAIL_USERNAME"] = "abc@gmail.com"  # Your Gmail address
+app.config["MAIL_PASSWORD"] = "hzxt xjlm ---- ----"  # The app-specific password generated
 mail = Mail(app)
 
 # File Upload Configuration
@@ -153,7 +153,7 @@ def donate():
             """
             
             # Sending email to admin
-            msg = Message(subject, sender="sakshipawar9846@gmail.com", recipients=[admin_email])
+            msg = Message(subject, sender="abc@gmail.com", recipients=[admin_email])
             msg.body = message_body
             try:
                 mail.send(msg)
